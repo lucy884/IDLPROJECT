@@ -24,28 +24,27 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
+          pip install -r course_service/requirements.txt
 
       # Step 4: Run Django tests (optional)
       - name: Run Django tests
         run: |
-          cd IDL/course_service
+          cd course_service
           python manage.py test
-        continue-on-error: true  # en cas d'absence de tests
+        continue-on-error: true
 
       # Step 5: Build Docker image
       - name: Build Docker image
         run: |
-          cd IDL/course_service
+          cd course_service
           docker build -t course-service .
 
-      # Step 6: Deploy to Render (API call)
+      # Step 6: Deploy to Render using API
       - name: Trigger Render Deploy
         run: |
           curl -X POST \
             -H "Accept: application/json" \
             -H "Authorization: Bearer ${{ secrets.RENDER_API_KEY }}" \
             -H "Content-Type: application/json" \
-            --data '{"serviceId": "${{ secrets.RENDER_SERVICE_ID }}"}' \
+            --data "{\"serviceId\": \"${{ secrets.RENDER_SERVICE_ID }}\"}" \
             https://api.render.com/v1/services/${{ secrets.RENDER_SERVICE_ID }}/deploys
