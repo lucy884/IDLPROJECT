@@ -1,0 +1,33 @@
+server:
+  port: ${PORT:8082}
+  servlet:
+    context-path: /api/auth
+
+spring:
+  application:
+    name: auth-service
+  
+  datasource:
+    url: ${DATABASE_URL}
+    hikari:
+      maximum-pool-size: 5
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: false
+
+jwt:
+  secret: ${JWT_SECRET}
+  expiration: 86400000
+
+cors:
+  allowed-origins: ${ALLOWED_ORIGINS}
+
+logging:
+  level:
+    root: INFO
