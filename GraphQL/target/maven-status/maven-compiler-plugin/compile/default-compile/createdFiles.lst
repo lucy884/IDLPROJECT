@@ -1,0 +1,5 @@
+com\example\gateway\config\CorsConfig.class
+com\example\gateway\config\GatewayConfig.class
+com\example\gateway\ApiGatewayApplication.class
+com\example\gateway\filter\LoggingFilter$Config.class
+com\example\gateway\filter\LoggingFilter.class
