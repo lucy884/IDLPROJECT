@@ -12,7 +12,12 @@ SECRET_KEY = config('SECRET_KEY', default='django-insecure-your-secret-key-chang
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    "course-service-fj4t.onrender.com",
+]
+
 
 # Application definition
 INSTALLED_APPS = [
@@ -70,7 +75,7 @@ DATABASES = {
         'NAME': 'course_db_1lil',
         'USER': 'course_db_user',
         'PASSWORD': 'znWGDsmHgo0g7NYWRyBhb1tq0CNopzFN',
-        'HOST': 'dpg-d4ml8u3uibrs738mirs0-a',
+        'HOST': 'dpg-d4ml8u3uibrs738mirs0-a.oregon-postgres.render.com',
         'PORT': '5432',
     }
 }
