@@ -47,6 +47,6 @@ jobs:
             -H "Accept: application/json" \
             -H "Authorization: Bearer ${{ secrets.RENDER_API_KEY }}" \
             -H "Content-Type: application/json" \
-            --data "{\"serviceId\": \"${{ secrets.RENDER_AUTH_SERVICE_ID }}\"}" \
+            -d '{"serviceId": "${{ secrets.RENDER_AUTH_SERVICE_ID }}"}' \
             https://api.render.com/v1/services/${{ secrets.RENDER_AUTH_SERVICE_ID }}/deploys
         continue-on-error: true
