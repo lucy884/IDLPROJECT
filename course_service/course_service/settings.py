@@ -67,11 +67,11 @@ WSGI_APPLICATION = 'course_service.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('DB_NAME', default='course_db'),
-        'USER': config('DB_USER', default='postgres'),
-        'PASSWORD': config('DB_PASSWORD', default='postgres'),
-        'HOST': config('DB_HOST', default='localhost'),
-        'PORT': config('DB_PORT', default='5432'),
+        'NAME': 'course_db_1lil',
+        'USER': 'course_db_user',
+        'PASSWORD': 'znWGDsmHgo0g7NYWRyBhb1tq0CNopzFN',
+        'HOST': 'dpg-d4ml8u3uibrs738mirs0-a',
+        'PORT': '5432',
     }
 }
 

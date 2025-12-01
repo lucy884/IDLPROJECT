@@ -43,5 +43,5 @@ jobs:
     # Step 6: Deploy to Render
     - name: Deploy to Render
       run: |
-        curl https://api.render.com/deploy/${{ secrets.RENDER_SERVICE_ID }}?key=${{ secrets.RENDER_API_KEY }}
+        curl https://api.render.com/deploy/${{ secrets.srv-d4mq3rmmcj7s73cgp3eg}}?key=${{ secrets.rnd_LXoTgKacT3ToohLVAB9OChoVL90Z }}
       if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
