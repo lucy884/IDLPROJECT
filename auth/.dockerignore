@@ -1,0 +1,12 @@
+.git
+.gitignore
+.env
+.env.local
+*.log
+target/
+.mvn/
+.idea/
+*.iml
+.DS_Store
+README.md
+DEPLOYMENT_GUIDE.md
