@@ -4,6 +4,7 @@ services:
     runtime: docker
     rootDir: auth
     plan: free
+    healthCheckPath: /actuator/health
     envVars:
       - key: JAVA_VERSION
         value: "17"
